@@ -1,8 +1,13 @@
-var username = localStorage.getItem("name");
-
+var username; {
+  if (localStorage.length === 0) {
+      username = "Guest";
+  } else {
+      username = localStorage.getItem("name");
+  }
+}
 
 function addUserName() {
-    document.getElementById('currentname').innerHTML = username;
+  document.getElementById('currentname').innerHTML = username;
 }
 
 function changeName(){
@@ -19,10 +24,7 @@ window.onload = () => {
     navigator.serviceWorker
              .register('./sw.js');
   }
-  localStorage.setItem("name", "Guest");
   addUserName();
 }
-
-
 
 
