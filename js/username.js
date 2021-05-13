@@ -11,3 +11,4 @@ function updateVar(){
   document.getElementById('currentname').innerHTML = localStorage.getItem('name');
 }
 
+window.onload = updateVar();
