@@ -21,6 +21,6 @@ window.onload = () => {
   }
 }
 
-window.onload = updateVar();
+//window.onload = updateVar();
 
 
