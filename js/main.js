@@ -1,5 +1,6 @@
 var username = localStorage.getItem("name");
 
+
 function addUserName() {
     document.getElementById('currentname').innerHTML = username;
 }
