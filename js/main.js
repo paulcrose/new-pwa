@@ -1,4 +1,4 @@
-var username = "Test";
+var username = localStorage.getItem("name");
 
 function addUserName() {
     document.getElementById('currentname').innerHTML = username;
@@ -6,12 +6,10 @@ function addUserName() {
 
 function changeName(){
   username = document.getElementById("userNameSlot").value;
-  document.getElementById('currentname').innerHTML = username;
   localStorage.setItem("name", document.getElementById("userNameSlot").value);
+  document.getElementById('currentname').innerHTML = username;
   console.log(username);
 }
-
-
 
 window.onload = () => {
   'use strict';
@@ -20,6 +18,7 @@ window.onload = () => {
     navigator.serviceWorker
              .register('./sw.js');
   }
+  localStorage.setItem("name", "Guest");
   addUserName();
 }
 
