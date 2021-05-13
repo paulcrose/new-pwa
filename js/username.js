@@ -1,4 +1,8 @@
-var username = "Bob";
+var username = "Guest";
+
+function addUserName() {
+    document.getElementById('currentname').innerHTML = username;
+}
 
 function changeVar(){
     username = document.getElementById("userNameSlot").value;
