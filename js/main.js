@@ -4,7 +4,6 @@ function changeVar(){
     username = document.getElementById("userNameSlot").value;
     document.getElementById('currentname').innerHTML = username;
     localStorage.setItem("name", document.getElementById("userNameSlot").value);
-    document.getElementById('currentname').innerHTML = localStorage.getItem('name');
     console.log(username);
 } 
 
@@ -22,4 +21,4 @@ window.onload = () => {
   }
 }
 
-window.onload = updateVar();
+
