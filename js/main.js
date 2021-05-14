@@ -17,6 +17,11 @@ function changeName(){
   console.log(username);
 }
 
+function NewTab() { 
+  window.open( 
+    "page_2.html", "_blank"); 
+} 
+
 window.onload = () => {
   'use strict';
 
